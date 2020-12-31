@@ -1,0 +1,90 @@
+<section class="hero is-dark is-medium is-bold">
+
+
+
+  <div class="hero-body">
+
+
+
+    <div class="text">
+
+      <div class="container">
+        <div *ngIf="loading_main == true">
+
+          <div class="loading"></div>
+
+
+        </div>
+
+        <!-- <div class="row"> -->
+
+        <!-- <div class="col s12 m4"> -->
+        <div *ngIf="loading_main == false">
+
+          <div class="card_new">
+
+            <h1 style="font-size:40px">TODAY</h1>
+            <img [src]="icon_type_currentday" class="icon_size">
+            <h2 style="font-size:20px">{{weathervalue.city}}</h2>
+
+            <p>{{weathervalue.decrip}}</p>
+            <p>{{weathervalue.temp}}°C</p>
+            <p>{{weathervalue.sunrise}}</p>
+            <p>{{weathervalue.sunset}}</p>
+          </div>
+        </div>
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
+
+      <h1 style="font-size:40px">FORCASTED VALUE</h1>
+      <div class="row">
+
+        <div class="columns is-destkop equi_space ">
+          <div *ngIf=" loading_forcast==true">
+            <div class="loading"></div>
+
+          </div>
+
+
+          <div *ngFor="let item of combinedarray">
+
+            <div class="card_new">
+              <h1>{{item.api_data.datetime}}</h1>
+              <img [src]="item.icon_path_obtained" class="icon_size">
+
+              <p>{{item.api_data.weather.description}}</p>
+              <p>{{item.api_data.temp}}°C</p>
+
+              <p>{{item.api_data.sunrise_ts*1000|date:'shortTime' }}</p>
+              <p>{{item.api_data.sunset_ts*1000|date:'shortTime' }}</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>

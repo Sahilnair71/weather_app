@@ -1,0 +1,142 @@
+.button_allign{
+    padding: 1px 0px 4px 10px;
+}
+.text{
+    color:white;
+    /* margin: 50px; */
+}
+
+.icon_size{
+    height: 100px;
+    width:80px;
+    display: block;
+margin: auto;
+border-radius: 100%;
+border: 5px solid #02291C                                                                                                                                    ;
+}
+
+.card_new {
+    flex: 0 0 200px;
+    padding: 50px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px 5px #483D8B;
+    border: 5px solid #191970;
+    border-radius: 10px;
+    background:#6A5ACD
+  } 
+
+
+.container {
+    display: flex;
+    justify-content: center;
+  }
+
+.containerAllign {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .containerAllign .row {
+    margin: 0 auto;
+  }
+.equi_space {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+  .loading {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      box-sizing: border-box;
+      border-radius: 50%;
+      position: relative;
+      border-top: 10px solid #e74c3c;
+      animation: a1 2s linear infinite ;
+
+  }
+
+  .loading::before, .loading::after{
+      content: '';
+      width: 100px;
+      height: 100px;
+     
+      position: absolute;
+      left: 0;
+      top: -10px;
+      border-radius: 50%;
+      box-sizing: border-box;
+
+      
+
+  }
+
+  .loading::before {
+      border-top: 10px solid #e67e22;
+      transform: rotate(120deg);
+  }
+
+  .loading::after{
+      border-top:10px solid #3498db ;
+      transform:rotate(240deg)
+  }
+
+  @keyframes a1 {
+      to{
+        transform: rotate(360deg);
+      }
+  }
+
+
+
+
+
+
+
+  .loading_main {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 50%;
+    position: relative;
+    border-top: 10px solid #e74c3c;
+    animation: a2 2s linear infinite ;
+
+}
+
+.loading_main::before, .loading::after{
+    content: '';
+    width: 100px;
+    height: 100px;
+   
+    position: absolute;
+    left: 0;
+    top: -10px;
+    border-radius: 50%;
+    box-sizing: border-box;
+
+    
+
+}
+
+.loading_main::before {
+    border-top: 10px solid #e67e22;
+    transform: rotate(120deg);
+}
+
+.loading_main::after{
+    border-top:10px solid #3498db ;
+    transform:rotate(240deg)
+}
+
+@keyframes a2 {
+    to{
+      transform: rotate(360deg);
+    }
+}
